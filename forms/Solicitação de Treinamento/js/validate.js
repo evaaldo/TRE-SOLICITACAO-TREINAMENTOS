@@ -2,9 +2,11 @@
         validaCampos(parseInt(numState));
         validaCamposComCondicoesTabelaFilho(parseInt(numState), parseInt(nextState));
         removeClassErrorTable();
-        
+
+        var areaValidate = Formulario.verificaExistenciaArea(Campos.areaSolicitante());
         var tableValidate = validateParticipantTableScale();
-        if(tableValidate == false) {
+
+        if(tableValidate == false || areaValidate == false) {
             return false;
         } else {
             return exibeCamposObrigatorios();
@@ -38,7 +40,7 @@
     };
 
     function validaCamposComCondicoesTabelaFilho(atividade, nextState) {
-    if (/^(0|4|61|64)$/.test(atividade) || /^(8|10)$/.test(nextState)) {
+        if (/^(0|7|61|64)$/.test(atividade)) {
             addHasFreeTable("input", "tbParticipanteIndice", 0);
             addHasFreeTable("input", "tbParticipanteMatricula", 0);
             addHasFreeTable("input", "tbParticipanteNome", 0);
@@ -46,9 +48,10 @@
             addHasFreeTable("input", "tbParticipanteAdmissao", 0);
             addHasFreeTable("input", "tbParticipanteSituacao", 0);
             addHasFreeTable("input", "tbParticipanteTempoEmpresa", 0);
+            addHasFreeTable("select", "tbParticipantePDI", 0);
+        } else if(/^(8|10)$/.test(atividade)) {
             addHasFreeTable("input", "tbParticipanteADC", 0);
             addHasFreeTable("textarea", "tbParticipanteAderenciaSaber", 0);
-            addHasFreeTable("input", "tbParticipantePDI", 0);
         }
     }
 
@@ -143,6 +146,20 @@
             $("#documentoNormativo").removeClass("has-free");
             $("#anexo_documentoNormativo").removeClass("has-free");
             $("#divAdicionarDocumentoNormativo").removeClass("has-error");
+        }
+    }
+
+    function validateDataTreinamento(dataInscricaoStr,dataTreinamentoStr) {
+        var dataInscricao = new Date(dataInscricaoStr.split('/').reverse().join('-'));
+        var dataTreinamento = new Date(dataTreinamentoStr.split('/').reverse().join('-'));
+        
+        if (dataInscricao > dataTreinamento) {
+            Utils.exibirAlerta("error", "Data de treinamento", "A data de treinamento não pode ser anterior a data de inscrição");
+            return false;
+        } else if (dataInscricao < dataTreinamento) {
+            return true;
+        } else {
+            return true;
         }
     }
 

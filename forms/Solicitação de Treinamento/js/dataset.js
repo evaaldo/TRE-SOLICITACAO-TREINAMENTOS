@@ -43,53 +43,120 @@ var Datasets = {
 	},
 
     getDadosSolicitante: function(matricula) {
-        var matriculaSeparada = matricula.split("-");
-        var coligada = matriculaSeparada[0];
-        var chapa = matriculaSeparada[1];
-    
-        var c1Colaborador = DatasetFactory.createConstraint("coligada", coligada, coligada, ConstraintType.MUST);
-        var c2Colaborador = DatasetFactory.createConstraint("chapa", chapa, chapa, ConstraintType.MUST);
-        var colaborador = DatasetFactory.getDataset(Datasets.dsRMFuncionarios, [Datasets.dsFuncionarioPorMatricula], [c1Colaborador, c2Colaborador], null);
-    
-        var custo = colaborador.values[0]["CENTROCUSTO"];
-    
-        var c1BP = DatasetFactory.createConstraint("coligada", coligada, coligada, ConstraintType.MUST);
-        var c2BP = DatasetFactory.createConstraint("custo", custo, custo, ConstraintType.MUST);
-        var bpSolicitante = DatasetFactory.getDataset(Datasets.dsRMFuncionarios, [Datasets.dsBPColaborador], [c1BP, c2BP], null);
+        Datasets.getDadosColaborador(matricula)
+            .then(colaborador => {
+                Colaboradores.inserirDadosColaborador(colaborador);
 
-        if (custo.length == 17) {
-            custo = custo.substr(3, 14);
-        }
-    
-        var c1 = DatasetFactory.createConstraint("centrocusto", custo, custo, ConstraintType.MUST);
-        var diretoria = DatasetFactory.getDataset(Datasets.dsRMFuncionarios, [Datasets.dsDiretoriaCentroCusto], [c1], null);
+                var custoBP = colaborador.CENTROCUSTO;
+                if (custoBP.length === 17) {
+                    var custoDiretoria = custoBP.substr(3, 14);
+                }
 
-        return [{colaborador,bpSolicitante,diretoria}];
+                return Promise.all([
+                    Datasets.getDadosBP(colaborador.CODCOLIGADA, custoBP),
+                    Datasets.getDadosDiretoria(custoDiretoria)
+                ]);
+            })
+            .then(([dadosBP, dadosDiretoria]) => {
+                Colaboradores.inserirDadosBP(dadosBP);
+                Colaboradores.inserirDadosDiretoria(dadosDiretoria);
+            })
+            .catch(error => {
+                console.error("Erro ao obter dados:", error);
+            });
+    },
+
+    getDadosColaborador: function(matricula) {
+        return new Promise((resolve, reject) => {
+            var parametros = [];
+            var fields = [Datasets.dsFuncionarioPorMatricula];
+
+            var matriculaSeparada = matricula.split("-");
+            var coligada = matriculaSeparada[0];
+            var chapa = matriculaSeparada[1];
+
+            parametros.push({ "CHAVE": "coligada", "VALOR": coligada });
+            parametros.push({ "CHAVE": "chapa", "VALOR": chapa });
+
+            DatasetAsync.GetDatasetCallback("ds_integracao_rm", parametros, fields, (data) => {
+                if (data && data.length > 0) {
+                    resolve(data[0]); // Resolve com o primeiro item do array
+                } else {
+                    reject(new Error("Dados do colaborador não encontrados"));
+                }
+            });
+        });
+    },
+
+    getDadosBP: function(coligada, custo) {
+        return new Promise((resolve, reject) => {
+            var parametros = [];
+            var fields = [Datasets.dsBPColaborador];
+
+            parametros.push({ "CHAVE": "coligada", "VALOR": coligada });
+            parametros.push({ "CHAVE": "custo", "VALOR": custo });
+
+            DatasetAsync.GetDatasetCallback("ds_integracao_rm", parametros, fields, (data) => {
+                if (data && data.length > 0) {
+                    resolve(data[0]);
+                } else {
+                    reject(new Error("Dados do BP não encontrados"));
+                }
+            });
+        });
+    },
+
+    getDadosDiretoria: function(centrocusto) {
+        return new Promise((resolve, reject) => {
+            var parametros = [];
+            var fields = [Datasets.dsDiretoriaCentroCusto];
+
+            parametros.push({ "CHAVE": "centrocusto", "VALOR": centrocusto });
+
+            DatasetAsync.GetDatasetCallback("ds_integracao_rm", parametros, fields, (data) => {
+                if (data && data.length > 0) {
+                    resolve(data[0]);
+                } else {
+                    reject(new Error("Dados da diretoria não encontrados"));
+                }
+            });
+        });
     },
 
     getDadosGestor: function(matricula) {
+        var parametros = [];
+        var fields = [Datasets.dsFuncionarioPorMatricula];
+
         var matriculaSeparada = matricula.split("-");
         var coligada = matriculaSeparada[0];
-        var chapa = matriculaSeparada[1];
+        var chapa = matriculaSeparada[1];        
 
-        var c1Gestor = DatasetFactory.createConstraint("coligada", coligada, coligada, ConstraintType.MUST);
-        var c2Gestor = DatasetFactory.createConstraint("chapa", chapa, chapa, ConstraintType.MUST);
-        var gestor = DatasetFactory.getDataset(Datasets.dsRMFuncionarios, [Datasets.dsFuncionarioPorMatricula], [c1Gestor, c2Gestor], null);
-
-        return gestor;
+        parametros.push({"CHAVE" : "coligada", "VALOR" : coligada})
+        parametros.push({"CHAVE" : "chapa", "VALOR" : chapa})
+        DatasetAsync.GetDatasetCallback("ds_integracao_rm", parametros, fields, Colaboradores.inserirDadosGestor);
     },
 
-    getDadosParticipante: function(idForm) {        
-        var matricula = $("#" + idForm).val();
-        var matriculaSeparada = matricula.split('-');
-        var coligada = matriculaSeparada[0];
-        var chapa = matriculaSeparada[1];
-
-        var c1 = DatasetFactory.createConstraint("coligada", coligada, coligada, ConstraintType.MUST);
-        var c2 = DatasetFactory.createConstraint("chapa", chapa, chapa, ConstraintType.MUST);
-        var participante = DatasetFactory.getDataset(Datasets.dsRMFuncionarios, [Datasets.dsFuncionarioPorMatricula], [c1, c2], null);  
-        
-        return participante;
+    getDadosParticipante: function(idForm, indice) {    
+        return new Promise((resolve, reject) => {
+            var parametros = [];
+            var fields = [Datasets.dsFuncionarioPorMatricula];
+    
+            var matricula = $("#" + idForm).val();
+            var matriculaSeparada = matricula.split('-');
+            var coligada = matriculaSeparada[0];
+            var chapa = matriculaSeparada[1];
+    
+            parametros.push({"CHAVE": "coligada", "VALOR": coligada});
+            parametros.push({"CHAVE": "chapa", "VALOR": chapa});
+    
+            DatasetAsync.GetDatasetCallback("ds_integracao_rm", parametros, fields, (data) => {
+                if (data && data.length > 0) {
+                    resolve(data);
+                } else {
+                    reject(new Error("Dados do participante não encontrados"));
+                }
+            });
+        });
     },
 
     getAtividadesPercorridas: function(numeroSolicitacao) {

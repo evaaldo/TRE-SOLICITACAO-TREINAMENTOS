@@ -1,3 +1,13 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+* {
+    font-family: 'Satoshi', sans-serif !important;
+}
+
+.awesomplete {
+    width: 100%;
+}
+
 .componentAnexo{
     display: flex;
     align-items: center;
@@ -68,4 +78,8 @@
 .componentAnexo .icones .btn-danger:active,
 .componentAnexo .icones .btn-danger:hover{
     border: solid 1px #cc3d3d!important;
+}
+
+.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal {
+    font-family: 'Satoshi', sans-serif !important;
 }

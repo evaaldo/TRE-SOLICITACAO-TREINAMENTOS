@@ -190,6 +190,10 @@ var Campos = {
             return this.id;
         }).get();
     },
+
+    divRemoverParticipante: function() {
+        return $("#divRemoverParticipante");
+    },
  
     // Campos de justificativa do treinamento
  

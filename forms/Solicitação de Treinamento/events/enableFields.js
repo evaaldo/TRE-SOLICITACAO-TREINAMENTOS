@@ -19,17 +19,13 @@ function enableFields(form){
 
         // Dados do Treinamento
         form.setEnabled("nomeTreinamento", true);
-        form.setEnabled("optionRadioInterno",true);
-        form.setEnabled("optionRadioExterno",true);
-        form.setEnabled("optionRadioInCompany",true);
         form.setEnabled("nomeInstituicao", true);
         form.setEnabled("contatoInstituicao", true);
         form.setEnabled("inscricoes", true);
         form.setEnabled("dataTreinamento", true);
         form.setEnabled("cargaHoraria", true);
-        form.setEnabled("optionRadioEAD",true);
-        form.setEnabled("optionRadioPresencial",true);
-        form.setEnabled("optionRadioHibrido",true);
+        form.setEnabled("origem",true);
+        form.setEnabled("modelo",true);
         form.setEnabled("categoria", true);
         form.setEnabled("tipo", true);
 
@@ -41,6 +37,7 @@ function enableFields(form){
 
         // Informações dos Participantes - Filhos
         habilitaCamposTabelaParticipantes(form, numAtividade);
+        desabilitaAderenciaADCParticipantes(form, numAtividade);
 
         // Justificativa de Treinamento
         form.setEnabled("requisito", true);
@@ -51,10 +48,8 @@ function enableFields(form){
         form.setEnabled("anexo_conteudo_programatico", true);
         
         // Investimento
-        form.setEnabled("optionRadioViajar", true);
-        form.setEnabled("optionRadioNaoViajar", true);
-        form.setEnabled("optionRadioIndividual", true);
-        form.setEnabled("optionRadioEmGrupo", true);
+        form.setEnabled("necessarioViajar", true);
+        form.setEnabled("especificacao", true);
         form.setEnabled("valorPessoa", true);
         form.setEnabled("valorTotal", true);
 
@@ -102,6 +97,7 @@ function enableFields(form){
 
         // Campos da tabela Pai x Filho
         desabilitaCamposTabelaParticipantes(form, numAtividade)
+        habilitaAderenciaADCParticipantes(form, numAtividade);
 
         // Justificativa de Treinamento
         form.setEnabled("requisito", false);
@@ -116,6 +112,10 @@ function enableFields(form){
         form.setEnabled("especificacao", false);
         form.setEnabled("valorPessoa", false);
         form.setEnabled("valorTotal", false);
+
+        // Definição de nível de treinamento
+        form.setEnabled("nivelTreinamento", false);
+        form.setEnabled("observacaoNivelTreinamento", false);
         
     } else if(/^(10)$/.test(numAtividade)) {
         
@@ -156,7 +156,8 @@ function enableFields(form){
         form.setEnabled("anexo_documentoNormativo", false);
 
         // Campos da tabela Pai x Filho
-        desabilitaCamposTabelaParticipantes(form, numAtividade)
+        desabilitaCamposTabelaParticipantes(form, numAtividade);
+        desabilitaAderenciaADCParticipantes(form, numAtividade);
 
         // Justificativa de Treinamento
         form.setEnabled("requisito", false);
@@ -171,6 +172,10 @@ function enableFields(form){
         form.setEnabled("especificacao", false);
         form.setEnabled("valorPessoa", false);
         form.setEnabled("valorTotal", false);
+
+        // Definição de nível de treinamento
+        form.setEnabled("nivelTreinamento", false);
+        form.setEnabled("observacaoNivelTreinamento", false);
         
     } else if(/^(49)$/.test(numAtividade)) {
 
@@ -215,7 +220,8 @@ function enableFields(form){
         form.setEnabled("anexo_documentoNormativo", false);
 
         // Campos da tabela Pai x Filho
-        desabilitaCamposTabelaParticipantes(form, numAtividade)        
+        desabilitaCamposTabelaParticipantes(form, numAtividade);
+        desabilitaAderenciaADCParticipantes(form, numAtividade);
 
         // Justificativa de Treinamento
         form.setEnabled("requisito", false);
@@ -274,7 +280,8 @@ function enableFields(form){
         form.setEnabled("anexo_documentoNormativo", false);
 
         // Campos da tabela Pai x Filho
-        desabilitaCamposTabelaParticipantes(form, numAtividade)        
+        desabilitaCamposTabelaParticipantes(form, numAtividade);
+        desabilitaAderenciaADCParticipantes(form, numAtividade);   
 
         // Justificativa de Treinamento
         form.setEnabled("requisito", false);
@@ -310,9 +317,22 @@ function habilitaCamposTabelaParticipantes(form, numAtividade) {
             form.setEnabled("tbParticipanteAdmissao" + sufixo, true);
             form.setEnabled("tbParticipanteSituacao" + sufixo, true);
             form.setEnabled("tbParticipanteTempoEmpresa" + sufixo, true);
+            form.setEnabled("tbParticipantePDI" + sufixo, true);
+        }
+    }
+}
+
+function habilitaAderenciaADCParticipantes(form, numAtividade) {
+    var participantes = form.getChildrenIndexes("tbParticipante");
+    var i = /^(0|7|61|64|8)$/.test(numAtividade) ? -1 : 0;
+    var sufixo = null;
+    
+    if(participantes.length > 0) {
+        for(i; i < participantes.length; i++) {
+            sufixo = i == "-1" ? "" : "___" + participantes[i]
+
             form.setEnabled("tbParticipanteADC" + sufixo, true);
             form.setEnabled("tbParticipanteAderenciaSaber" + sufixo, true);
-            form.setEnabled("tbParticipantePDI" + sufixo, true);
         }
     }
 }
@@ -333,9 +353,21 @@ function desabilitaCamposTabelaParticipantes(form, numAtividade) {
             form.setEnabled("tbParticipanteAdmissao" + sufixo, false);
             form.setEnabled("tbParticipanteSituacao" + sufixo, false);
             form.setEnabled("tbParticipanteTempoEmpresa" + sufixo, false);
+            form.setEnabled("tbParticipantePDI" + sufixo, false);
+        }
+    }
+}
+function desabilitaAderenciaADCParticipantes(form, numAtividade) {
+    var participantes = form.getChildrenIndexes("tbParticipante");
+    var i = /^(0|7|61|64|8)$/.test(numAtividade) ? -1 : 0;
+    var sufixo = null;
+    
+    if(participantes.length > 0) {
+        for(i; i < participantes.length; i++) {
+            sufixo = i == "-1" ? "" : "___" + participantes[i]
+
             form.setEnabled("tbParticipanteADC" + sufixo, false);
             form.setEnabled("tbParticipanteAderenciaSaber" + sufixo, false);
-            form.setEnabled("tbParticipantePDI" + sufixo, false);
         }
     }
 }

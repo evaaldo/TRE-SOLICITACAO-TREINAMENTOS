@@ -17,6 +17,8 @@ var Formulario = {
         new Awesomplete(input, {
             list: areas
         });
+
+        Formulario.esconderBotoesComAcao(Campos.numAtividade().val());
         
     },
 
@@ -109,8 +111,10 @@ var Formulario = {
             areas.push(areasDataset.values[i].AREA)
         }
 
-        if (!areas.includes(campo.value)) {
+        if (!areas.includes(campo[0].value)) {
             $(campo).val('');
+            Utils.exibirAlerta("error", "Área inexistente!", "Área informada não está cadastrada.")
+            return false;
         };
 
     },
@@ -125,6 +129,29 @@ var Formulario = {
         return false
 
     },
+
+    esconderBotoesComAcao: function(numAtividade) {
+        if(numAtividade != "7" && numAtividade != "0" && numAtividade != "61" && numAtividade != "64") {
+            Campos.excluirConteudoPragmatico().hide();
+            Campos.excluirdocumentos_processo().hide();
+            $("[id^='divRemoverParticipante']").each(function() {
+                $(this).hide();
+            });
+        }
+    },
+
+    duvidaCategoria: function() {
+        Swal.fire({
+            title: "<strong>Categoria</strong>",
+            icon: "info",
+            html: `
+                <p style="text-align: center;"><strong>Atualmente existem essas categorias</strong></p>
+                <p>Jeito de ser - Conteúdos que reforçam nosso propósito, valores e cultura.<p/><hr>
+                <p>Jeito de fazer - Conteúdos que apoiam a execução do trabalho, incluindo cursos obrigatórios e certificações.<p/><hr>
+                <p>Jeito de liderar - Conteúdos que contribuem com o desenvolvimento dos nossos lideres.<p/>
+            `,
+        });
+    }
 
 };
 

@@ -54,6 +54,6 @@ var Utils = {
     exibirAlerta: function(iconePersonalizado, tituloPersonalizado, textoPersonalizado) {
         AlertaCustomizadoX = new AlertaCustomizado(iconePersonalizado,tituloPersonalizado,textoPersonalizado,'');
         AlertaCustomizadoX.exibeAlerta1();
-    },
+    }
 
 }

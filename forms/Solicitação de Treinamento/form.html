@@ -7,6 +7,7 @@
 	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
 	<script type="text/javascript" src="./js/validate.js"></script>
 	<script type="text/javascript" src="./js/dataset.js"></script>
+	<script type="text/javascript" src="./js/datasetAsync.js"></script>
 	<script type="text/javascript" src="./js/atividades.js"></script>
 	<script type="text/javascript" src="./js/utils.js"></script>
 	<script type="text/javascript" src="./js/form.js"></script>
@@ -26,84 +27,14 @@
 <body>
 	<div class="fluig-style-guide">
 		<form name="form" id="form" role="form">
-			<!-- Campos Hidden -->
-			<div>
-				<!-- Informações Gerais -->
-				<input type="hidden" name="matriculaGestorArea_h" id="matriculaGestorArea_h">
-				<input type="hidden" name="matriculaSolicitante_h" id="matriculaSolicitante_h">
-				<input type="hidden" name="areaSolicitante_h" id="areaSolicitante_h">
-				<input type="hidden" name="bpRhResponsavel_h" id="bpRhResponsavel_h">
-				<input type="hidden" name="gestorImediato_h" id="gestorImediato_h">
-				<input type="hidden" name="unidade_h" id="unidade_h">
-				<input type="hidden" name="diretoria_h" id="diretoria_h">
-
-				<!-- Dados do Treinamento -->
-				<input type="hidden" name="categoria_h" id="categoria_h">
-				<input type="hidden" name="nomeTreinamento_h" id="nomeTreinamento_h">
-				<input type="hidden" name="optionRadioInterno_h" id="optionRadioInterno_h">
-				<input type="hidden" name="optionRadioExterno_h" id="optionRadioInterno_h">
-				<input type="hidden" name="optionRadioInCompany_h" id="optionRadioInCompany_h">
-				<input type="hidden" name="nomeInstituicao_h" id="nomeInstituicao_h">
-				<input type="hidden" name="contatoInstituicao_h" id="contatoInstituicao_h">
-				<input type="hidden" name="optionRadioCursoTreinamento_h" id="optionRadioCursoTreinamento_h">
-				<input type="hidden" name="optionRadioWorkshopForum_h" id="optionRadioWorkshopForum_h">
-				<input type="hidden" name="optionRadioPalestraCongresso_h" id="optionRadioPalestraCongresso_h">
-				<input type="hidden" name="inscricoes_h" id="inscricoes_h">
-				<input type="hidden" name="dataTreinamento_h" id="dataTreinamento_h">
-				<input type="hidden" name="cargaHoraria_h" id="cargaHoraria_h">
-				<input type="hidden" name="optionRadioEAD_h" id="optionRadioEAD_h">
-				<input type="hidden" name="optionRadioPresencial_h" id="optionRadioPresencial_h">
-				<input type="hidden" name="optionRadioHibrido_h" id="optionRadioHibrido_h">
-
-				<!-- Informações dos Participantes -->
-				<input type="hidden" name="escalaParticipantes_h" id="escalaParticipantes_h">
-				<input type="hidden" name="quantidadeParticipantes_h" id="quantidadeParticipantes_h">
-				<input type="hidden" name="anexo_planilhaParticipantes_h" id="anexo_planilhaParticipantes_h">
-				<input type="hidden" name="anexo_documentoNormativo_h" id="anexo_documentoNormativo_h">
-
-				<!-- Justificativa do Treinamento -->
-				<input type="hidden" name="optionradioiso_h" id="optionradioiso_h">
-				<input type="hidden" name="optionRadioAtualizacaoLei_h" id="optionRadioAtualizacaoLei_h">
-				<input type="hidden" name="optionRadioAcaoEngajamento_h" id="optionRadioAcaoEngajamento_h">
-				<input type="hidden" name="optionRadioCumprimentoMatriz_h" id="optionRadioCumprimentoMatriz_h">
-				<input type="hidden" name="optionRadioParticipantePDI_h" id="optionRadioParticipantePDI_h">
-				<input type="hidden" name="optionRadioSemFaciliador_h" id="optionRadioSemFaciliador_h">
-				<input type="hidden" name="justificativa_h" id="justificativa_h">
-				<input type="hidden" name="conteudo_programatico_h" id="conteudo_programatico_h">
-				<input type="hidden" name="programacaoEventoDescricao_h" id="programacaoEventoDescricao_h">
-				<input type="hidden" name="anexo_programacao_evento_h" id="anexo_programacao_evento_h">
-				<input type="hidden" name="anexo_conteudo_programatico_h" id="anexo_conteudo_programatico_h">
-
-				<!-- Investimento -->
-				<input type="hidden" name="optionRadioViajar_h" id="optionRadioViajar_h">
-				<input type="hidden" name="optionRadioNaoViajar_h" id="optionRadioNaoViajar_h">
-				<input type="hidden" name="optionRadioIndividual_h" id="optionRadioIndividual_h">
-				<input type="hidden" name="optionRadioEmGrupo_h" id="optionRadioEmGrupo_h">
-				<input type="hidden" name="valorPessoa_h" id="valorPessoa_h">
-				<input type="hidden" name="valorTotal_h" id="valorTotal_h">
-
-				<!-- Aprovação da BP -->
-				<input type="hidden" name="aprovarBP_h" id="aprovarBP_h">
-				<input type="hidden" name="observacaoBP_h" id="observacaoBP_h">
-
-				<!-- Aprovação da Área -->
-				<input type="hidden" name="aprovarAreaResponsavel_h" id="aprovarAreaResponsavel_h">
-				<input type="hidden" name="observacaoAreaResponsavel_h" id="observacaoAreaResponsavel_h">
-
-				<!-- Aprovação da Área após a correção -->
-				<input type="hidden" name="aprovarAreaResponsavel2_h" id="aprovarAreaResponsavel2_h">
-
-				<!-- Definição de nível de treinamento -->
-				<input type="hidden" name="resp_etapa4" id="resp_etapa4" value="1-10731">
-				<input type="hidden" name="nivelTreinamento_h" id="nivelTreinamento_h">
-				<input type="hidden" name="observacaoNivelTreinamento_h" id="observacaoNivelTreinamento_h">
-
-			</div>
 				<div class="panel panel-info" id="panel_geral">
 					<div class="panel-heading">
 						<h3 class="panel-title text-center">SOLICITAÇÃO DE TREINAMENTO</h3>
 					</div>
 					<div class="panel-body">
+						<div class="alert alert-warning" role="alert">
+							<strong>Antes de enviar o formulário, lembre-se de preencher cada campo obrigatório. Ao enviar, será notificado quais campos não foram preenchidos e devem ser.</strong>
+						</div>
 						<div class="panel-group collapse-orange" id="collapse-parent">
 							<div class="panel panel-info" data-toggle="collapse" data-parent="#collapse-parent" id="painelInfosGerais">
 								<div class="panel-heading">
@@ -119,8 +50,8 @@
 									<div class="panel-body">
 										<div class="row">
 											<div class="form-group col-sm-3 obrigatorio0 obrigatorio7 obrigatorio61 obrigatorio64">
-												<label class="control-label" for="matriculaGestorArea">Matrícula do Gestor da área</label>
-												<input class="form-control" type="text" id="matriculaGestorArea" name="matriculaGestorArea" placeholder="Ex: 1-10226" mask="0-00000" onblur="Colaboradores.preencherDadosGestor()">
+												<label class="control-label" for="matriculaSolicitante">Matrícula do solicitante</label>
+												<input class="form-control" type="text" id="matriculaSolicitante" name="matriculaSolicitante" placeholder="Ex: 1-10226" mask="#0-00000" onblur="Colaboradores.enviarDadosSolicitante()">
 											</div>
 											<div class="form-group col-sm-6 obrigatorio0 obrigatorio7 obrigatorio61 obrigatorio64">
 												<label class="control-label" for="bpRhResponsavel">BP/RH Responsável</label>
@@ -130,14 +61,14 @@
 												<label class="control-label" for="areaSolicitante">Área solicitante</label>
 												<br>
 												<div class="controls">
-													<input class="form-control awesomplete" type="text" id="areaSolicitante" name="areaSolicitante" placeholder="Ex: Treinamentos" onblur="Formulario.verificaExistenciaArea(this)"/>
+													<input class="form-control awesomplete" type="text" id="areaSolicitante" name="areaSolicitante" placeholder="Ex: Treinamentos"/>
 												</div>
 											</div>	
 										</div>
 										<div class="row">
 											<div class="form-group col-sm-3 obrigatorio0 obrigatorio7 obrigatorio61 obrigatorio64">
-												<label class="control-label" for="matriculaSolicitante">Matrícula do solicitante</label>
-												<input class="form-control" type="text" id="matriculaSolicitante" name="matriculaSolicitante" placeholder="Ex: 1-10226" mask="0-00000" onblur="Colaboradores.preencherDadosSolicitante()">
+												<label class="control-label" for="matriculaGestorArea">Matrícula do Gestor da área</label>
+												<input class="form-control" type="text" id="matriculaGestorArea" name="matriculaGestorArea" placeholder="Ex: 1-10226" mask="#0-00000" onblur="Colaboradores.enviarDadosGestor()">
 											</div>
 											<div class="form-group col-sm-3 obrigatorio0 obrigatorio7 obrigatorio61 obrigatorio64">
 												<label class="control-label" for="gestorImediato">Nome do gestor imediato</label>
@@ -158,14 +89,14 @@
 							<div class="panel panel-info" data-toggle="collapse" data-parent="#collapse-parent" id="painelDadosTreinamento">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a class="collapse-icon" data-toggle="collapse" data-parent="#collapse-parent" href="#collapseDadosTreinamento">
+										<a class="collapse-icon up" data-toggle="collapse" data-parent="#collapse-parent" href="#collapseDadosTreinamento">
 											<strong>
 												Dados do Treinamento
 											</strong>
 										</a>
 									</h4>
 								</div>
-								<div id="collapseDadosTreinamento" class="panel-collapse collapse">
+								<div id="collapseDadosTreinamento" class="panel-collapse collapse in">
 									<div class="panel-body">
 										<div class="row">
 											<div class="form-group col-sm-4 obrigatorio0 obrigatorio7 obrigatorio61 obrigatorio64">
@@ -198,24 +129,16 @@
 										<div class="row">
 											<div class="form-group col-sm-3 obrigatorio0 obrigatorio7 obrigatorio61 obrigatorio64">
 												<label class="control-label" for="origem">Origem</label>
-												<select class="form-control" id="origem" name="origem" addblankline="true">
-													<option value=""></option>
-													<option value="interno">Interno (baixa complexidade)</option>
-													<option value="externo">Externo (média complexidade)</option>
-													<option value="inCompany">In Company (alta complexidade)</option>
+												<select class="form-control" id="origem" name="origem" dataset="DSCadastrarOrigemdeTreinamento" datasetkey="origem" datasetvalue="origem" addblankline="true">
 												</select>
 											</div>
 											<div class="form-group col-sm-3 obrigatorio0 obrigatorio7 obrigatorio61 obrigatorio64">
 												<label class="control-label" for="modelo">Modelo</label>
-												<select class="form-control" id="modelo" name="modelo" addblankline="true">
-													<option value=""></option>
-													<option value="ead">EAD</option>
-													<option value="presencial">Presencial</option>
-													<option value="hibrido">Híbrido</option>
+												<select class="form-control" id="modelo" name="modelo" dataset="DSCadastrarModelodeTreinamento" datasetkey="modelo" datasetvalue="modelo" addblankline="true">
 												</select>
 											</div>
 											<div class="form-group col-sm-3 obrigatorio0 obrigatorio7 obrigatorio61 obrigatorio64">
-												<label class="control-label" for="categoria">Categoria</label>
+												<label class="control-label" for="categoria">Categoria <i class="flaticon flaticon-question icon-xs" aria-hidden="true" onclick="Formulario.duvidaCategoria()"></i></label>
 												<select class="form-control" id="categoria" name="categoria" dataset="DSCadastrarCategoriadeTreinamento" datasetkey="categoria" datasetvalue="categoria" addblankline="true">
 												</select>
 											</div>
@@ -231,14 +154,14 @@
 							<div class="panel panel-info" data-toggle="collapse" data-parent="#collapse-parent" id="painelInfosParticipantes">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a class="collapse-icon" data-toggle="collapse" data-parent="#collapse-parent" href="#collapseInfosParticipantes">
+										<a class="collapse-icon up" data-toggle="collapse" data-parent="#collapse-parent" href="#collapseInfosParticipantes">
 											<strong>
 												Informações dos Participantes
 											</strong>
 										</a>
 									</h4>
 								</div>
-								<div id="collapseInfosParticipantes" class="panel-collapse collapse">
+								<div id="collapseInfosParticipantes" class="panel-collapse collapse in">
 									<div class="panel-body">
 										<div class="panel-body">
 											<div class="row">
@@ -330,7 +253,7 @@
 																	</div>
 																	<div class="form-group col-sm-3">
 																		<label class="control-label" for="tbParticipanteMatricula">Matrícula do participante</label>
-																		<input class="form-control" type="text" id="tbParticipanteMatricula" name="tbParticipanteMatricula" placeholder="Ex: 1-10226" mask="0-00000" onblur="Colaboradores.preencherDadosParticipante(this.id)">
+																		<input class="form-control" type="text" id="tbParticipanteMatricula" name="tbParticipanteMatricula" placeholder="Ex: 1-10226" mask="0-00000" onblur="Colaboradores.enviarDadosParticipante(this.id)">
 																	</div>
 																	<div class="form-group col-sm-3">
 																		<label class="control-label" for="tbParticipanteNome">Nome do participante</label>
@@ -355,22 +278,26 @@
 																		<input class="form-control" type="text" id="tbParticipanteTempoEmpresa" name="tbParticipanteTempoEmpresa" readonly>
 																	</div>
 																	<div class="form-group col-sm-3">
-																		<label class="control-label" for="tbParticipanteADC">Nota última ADC</label>
+																		<label class="control-label" for="tbParticipanteADC">Nota última ADC <i class="flaticon flaticon-question icon-xs" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="O campo 'Nota última ADC' é preenchido pelo BP"></i></label>
 																		<input class="form-control" type="text" id="tbParticipanteADC" name="tbParticipanteADC" placeholder="Ex: Última ADC">
 																	</div>
 																</div>
 																<div class="row">
 																	<div class="form-group col-sm-9">
-																		<label class="control-label" for="tbParticipanteAderenciaSaber">Aderência Plataforma SABER</label>
+																		<label class="control-label" for="tbParticipanteAderenciaSaber">Aderência Plataforma SABER <i class="flaticon flaticon-question icon-xs" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="O campo 'Aderência plataforma saber' é preenchido pelo BP"></i></label>
 																		<textarea class="form-control" name="tbParticipanteAderenciaSaber" id="tbParticipanteAderenciaSaber" rows="8" placeholder="Ex: Uso recorrente da plataforma SABER para cursos técnicos"></textarea>
 																	</div>
 																	<div class="form-group col-sm-3">
-																		<label class="control-label" for="tbParticipantePDI">PDI</label>
-																		<input class="form-control" type="text" id="tbParticipantePDI" name="tbParticipantePDI" placeholder="Ex: PDI">
+																		<label class="control-label" for="tbParticipantePDI">Ação de PDI</label>
+																		<select class="form-control" type="text" id="tbParticipantePDI" name="tbParticipantePDI" placeholder="Ex: PDI">
+																			<option value=""></option>
+																			<option value="sim">Sim</option>
+																			<option value="nao">Não</option>
+																		</select>
 																	</div>
 																</div>
 																<div class="row">
-																	<div class="form-group col-sm-2">
+																	<div id="divRemoverParticipante" class="form-group col-sm-2">
 																		<button id="removerParticipante" class="btn btn-danger btn-block" onclick="Formulario.excluirLinha(this);"><i class="flaticon flaticon-cancel icon-xs" aria-hidden="true"></i> Remover Participante</button>
 																	</div>
 																</div>
@@ -386,14 +313,14 @@
 							<div class="panel panel-info" data-toggle="collapse" data-parent="#collapse-parent" id="painelJustificativaTreinamento">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a class="collapse-icon" data-toggle="collapse" data-parent="#collapse-parent" href="#collapseJustificativaTreinamento">
+										<a class="collapse-icon up" data-toggle="collapse" data-parent="#collapse-parent" href="#collapseJustificativaTreinamento">
 											<strong>
 												Justificativa do Treinamento
 											</strong>
 										</a>
 									</h4>
 								</div>
-								<div id="collapseJustificativaTreinamento" class="panel-collapse collapse">
+								<div id="collapseJustificativaTreinamento" class="panel-collapse collapse in">
 									<div class="panel-body">
 										<div class="panel-body">
 											<div class="row">
@@ -463,14 +390,14 @@
 							<div class="panel panel-info" data-toggle="collapse" data-parent="#collapse-parent" id="painelInvestimento">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a class="collapse-icon" data-toggle="collapse" data-parent="#collapse-parent" href="#collapseInvestimento">
+										<a class="collapse-icon up" data-toggle="collapse" data-parent="#collapse-parent" href="#collapseInvestimento">
 											<strong>
 												Investimento
 											</strong>
 										</a>
 									</h4>
 								</div>
-								<div id="collapseInvestimento" class="panel-collapse collapse">
+								<div id="collapseInvestimento" class="panel-collapse collapse in">
 									<div class="panel-body">
 										<div class="panel-body">
 											<div class="row">
@@ -517,12 +444,13 @@
 									<div class="panel-body">
 										<div class="row">
 											<div class="form-group col-sm-4 obrigatorio8">
-												<label class="control-label" for="aprovarBP">Aprovação</label>
+												<label class="control-label" for="aprovarBP">Aprovação <i class="flaticon flaticon-question icon-xs" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="A opção 'Definir nível de treinamento' só deve ser usada caso o processo tenha voltado da definição de nível de treinamento para a aprovação BP (atual)"></i></label>
 												<select class="form-control" name="aprovarBP" id="aprovarBP">
 													<option value="">Selecione..</option>
 													<option value="aprovadoBP">Aprovado</option>
 													<option value="negadoBP">Negado</option>
 													<option value="necessitaAjustesBP">Necessita de ajustes</option>
+													<option value="definirNivelTreinamento">Definir nível de treinamento</option>
 												</select>
 											</div>
 											<div class="form-group col-sm-8 obrigatorio8">
@@ -536,7 +464,7 @@
 							<div class="panel panel-info" data-toggle="collapse" data-parent="#collapse-parent" id="painelAprvAreaResponsavel">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a class="collapse-icon" data-toggle="collapse" data-parent="#collapse-parent" href="#collapseAreaResponsavel">
+										<a class="collapse-icon up" data-toggle="collapse" data-parent="#collapse-parent" href="#collapseAreaResponsavel">
 											<strong>
 												Aprovação - Área Responsável
 											</strong>
@@ -568,7 +496,7 @@
 							<div class="panel panel-info" data-toggle="collapse" data-parent="#collapse-parent" id="painelNivelTreinamento">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a class="collapse-icon" data-toggle="collapse" data-parent="#collapse-parent" href="#collapseNivelTreinamento">
+										<a class="collapse-icon up" data-toggle="collapse" data-parent="#collapse-parent" href="#collapseNivelTreinamento">
 											<strong>
 												Definição do Nível de Treinamento
 											</strong>
@@ -586,6 +514,7 @@
 														<option value="treinamentoTecnico">Treinamento Técnico</option>
 														<option value="treinamentoCultura">Treinamento de Cultura</option>
 														<option value="treinamentoLideranca">Treinamento de Liderança</option>
+														<option value="ajustesBP">Enviar para BP ajustar</option>
 													</select>
 												</div>
 												<div class="form-group col-sm-8 obrigatorio49">

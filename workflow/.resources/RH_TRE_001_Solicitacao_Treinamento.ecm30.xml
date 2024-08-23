@@ -28,7 +28,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>RH - SOLICITAÇÃO DE TREINAMENTO</processId>
-      <version>1</version>
+      <version>18</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>0</formId>
@@ -124,10 +124,10 @@
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <notifyRequisitionerFollowUp>true</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>247</positionX>
-      <positionY>300</positionY>
+      <positionY>293</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -176,10 +176,10 @@
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <notifyRequisitionerFollowUp>true</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>460</positionX>
-      <positionY>504</positionY>
+      <positionY>503</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -226,7 +226,7 @@
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <notifyRequisitionerFollowUp>true</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>650</positionX>
       <positionY>771</positionY>
@@ -279,7 +279,7 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>900</positionX>
+      <positionX>1040</positionX>
       <positionY>771</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
@@ -329,10 +329,10 @@
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <notifyRequisitionerFollowUp>true</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>900</positionX>
-      <positionY>670</positionY>
+      <positionX>1040</positionX>
+      <positionY>660</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -381,7 +381,7 @@
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <notifyRequisitionerFollowUp>true</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>457</positionX>
       <positionY>90</positionY>
@@ -433,7 +433,7 @@
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <notifyRequisitionerFollowUp>true</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>820</positionX>
       <positionY>90</positionY>
@@ -486,7 +486,7 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>940</positionX>
+      <positionX>1080</positionX>
       <positionY>760</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
@@ -581,7 +581,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>180</positionX>
-      <positionY>324</positionY>
+      <positionY>317</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -697,6 +697,147 @@
         <companyId>1</companyId>
         <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
         <version>1</version>
+        <sequence>89</sequence>
+      </processStatePK>
+      <stateName>Intermediário</stateName>
+      <stateDescription>Intermediário</stateDescription>
+      <instruction>Evento intermediário do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>1</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>872</positionX>
+      <positionY>680</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>36</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <parentSequence>0</parentSequence>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
+        <version>1</version>
+        <sequence>91</sequence>
+      </processStatePK>
+      <stateName>Intermediário</stateName>
+      <stateDescription>Intermediário</stateDescription>
+      <instruction>Evento intermediário do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>1</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>590</positionX>
+      <positionY>240</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>36</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <parentSequence>0</parentSequence>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
+        <version>1</version>
+        <sequence>93</sequence>
+      </processStatePK>
+      <stateName>Intermediário</stateName>
+      <stateDescription>Intermediário</stateDescription>
+      <instruction>Evento intermediário do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>1</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>510</positionX>
+      <positionY>795</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>42</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <parentSequence>0</parentSequence>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
+        <version>1</version>
         <sequence>12</sequence>
       </processStatePK>
       <stateName>[C1] DECISÃO BP</stateName>
@@ -708,7 +849,7 @@
       <formFolder>0</formFolder>
       <automatic>true</automatic>
       <positionX>480</positionX>
-      <positionY>284</positionY>
+      <positionY>277</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -733,7 +874,32 @@
       <formFolder>0</formFolder>
       <automatic>true</automatic>
       <positionX>670</positionX>
-      <positionY>495</positionY>
+      <positionY>501</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
+        <version>1</version>
+        <sequence>86</sequence>
+      </processStatePK>
+      <stateName>[C3] DECISÃO NÍVEL DE TREINAMENTO</stateName>
+      <stateDescription>[C3] DECISÃO NÍVEL DE TREINAMENTO</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>860</positionX>
+      <positionY>762</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -772,7 +938,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>680</positionX>
-      <positionY>324</positionY>
+      <positionY>317</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -818,7 +984,7 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>1110</positionX>
+      <positionX>1250</positionX>
       <positionY>795</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
@@ -843,7 +1009,7 @@
         <companyId>1</companyId>
         <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
         <expressionOrder>1</expressionOrder>
-        <version>1</version>
+        <version>18</version>
         <sequence>12</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;aprovarBP&apos;) == &apos;aprovadoBP&apos;</condition>
@@ -855,7 +1021,7 @@
         <companyId>1</companyId>
         <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
         <expressionOrder>2</expressionOrder>
-        <version>1</version>
+        <version>18</version>
         <sequence>12</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;aprovarBP&apos;) == &apos;negadoBP&apos;</condition>
@@ -867,7 +1033,7 @@
         <companyId>1</companyId>
         <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
         <expressionOrder>3</expressionOrder>
-        <version>1</version>
+        <version>18</version>
         <sequence>12</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;aprovarBP&apos;) == &apos;necessitaAjustesBP&apos;</condition>
@@ -878,8 +1044,20 @@
       <conditionProcessStatePK>
         <companyId>1</companyId>
         <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
+        <expressionOrder>4</expressionOrder>
+        <version>18</version>
+        <sequence>12</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&apos;aprovarBP&apos;) == &apos;definirNivelTreinamento&apos;</condition>
+      <destinationSequenceId>91</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
         <expressionOrder>1</expressionOrder>
-        <version>1</version>
+        <version>18</version>
         <sequence>46</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;aprovarAreaResponsavel&apos;) == &apos;aprovadoAreaResponsavel&apos;</condition>
@@ -891,7 +1069,7 @@
         <companyId>1</companyId>
         <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
         <expressionOrder>2</expressionOrder>
-        <version>1</version>
+        <version>18</version>
         <sequence>46</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;aprovarAreaResponsavel&apos;) == &apos;negadoAreaResponsavel&apos;</condition>
@@ -903,11 +1081,35 @@
         <companyId>1</companyId>
         <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
         <expressionOrder>3</expressionOrder>
-        <version>1</version>
+        <version>18</version>
         <sequence>46</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;aprovarAreaResponsavel&apos;) == &apos;necessitaAjustesAreaResponsavel&apos;</condition>
       <destinationSequenceId>64</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>18</version>
+        <sequence>86</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&apos;nivelTreinamento&apos;) == &apos;ajustesBP&apos;</condition>
+      <destinationSequenceId>89</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>18</version>
+        <sequence>86</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>53</destinationSequenceId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
   </list>
@@ -1189,11 +1391,11 @@
         <companyId>1</companyId>
         <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
         <version>1</version>
-        <linkSequence>86</linkSequence>
+        <linkSequence>87</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>49</initialStateSequence>
+      <initialStateSequence>86</initialStateSequence>
       <finalStateSequence>53</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
@@ -1206,7 +1408,75 @@
         <companyId>1</companyId>
         <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
         <version>1</version>
-        <linkSequence>87</linkSequence>
+        <linkSequence>88</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>49</initialStateSequence>
+      <finalStateSequence>86</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
+        <version>1</version>
+        <linkSequence>90</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>86</initialStateSequence>
+      <finalStateSequence>89</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
+        <version>1</version>
+        <linkSequence>92</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>12</initialStateSequence>
+      <finalStateSequence>91</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
+        <version>1</version>
+        <linkSequence>94</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>93</initialStateSequence>
+      <finalStateSequence>49</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
+        <version>1</version>
+        <linkSequence>95</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
@@ -1222,12 +1492,44 @@
         <companyId>1</companyId>
         <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
         <version>1</version>
-        <linkSequence>88</linkSequence>
+        <linkSequence>96</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
       <initialStateSequence>84</initialStateSequence>
       <finalStateSequence>82</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
+        <version>1</version>
+        <linkSequence>97</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>89</initialStateSequence>
+      <finalStateSequence>80</finalStateSequence>
+      <returnLabel></returnLabel>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
+        <version>1</version>
+        <linkSequence>98</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>91</initialStateSequence>
+      <finalStateSequence>93</finalStateSequence>
       <returnLabel></returnLabel>
       <automaticLink>false</automaticLink>
       <defaultLink>false</defaultLink>
@@ -1243,32 +1545,54 @@
         <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
         <version>1</version>
       </workflowProcessEventPK>
-      <eventDescription>function servicetask53(attempt, message) {&#xd;
-&#xd;
-    return true;&#xd;
-&#xd;
-    // var user = &quot;admin&quot;;&#xd;
-    // var template = &quot;&quot;;&#xd;
-&#xd;
-    // var destinatario = String(hapi.getCardValue(&quot;&quot;));&#xd;
-&#xd;
-    // var parametros = new java.util.HashMap();&#xd;
-&#xd;
-    // var assuntoEmail = &quot;[TREINAMENTOS] Solicitação de novo treinamento&quot;&#xd;
-&#xd;
-    // parametros.put(&quot;subject&quot;, assuntoEmail);&#xd;
-    // parametros.put(&quot;&quot;, String(hAPI.getCardValue(&quot;&quot;)));&#xd;
-    // parametros.put(&quot;&quot;, String(hAPI.getCardValue(&quot;&quot;)));&#xd;
-    // parametros.put(&quot;&quot;, String(hAPI.getCardValue(&quot;&quot;)));&#xd;
-    // parametros.put(&quot;&quot;, String(hAPI.getCardValue(&quot;&quot;)));&#xd;
-    // parametros.put(&quot;&quot;, String(hAPI.getCardValue(&quot;&quot;)));&#xd;
-    // parametros.put(&quot;&quot;, String(hAPI.getCardValue(&quot;&quot;)));&#xd;
-&#xd;
-    // var destinatarios = new java.util.ArrayList();&#xd;
-    // destinatarios.add(destinatario);&#xd;
-&#xd;
-    // notifier.notify(user, template, parametros, destinatarios, &quot;text/html&quot;);&#xd;
-&#xd;
+      <eventDescription>function servicetask53(attempt, message) {
+
+    var user = &quot;admin&quot;;
+    var template = &quot;notifySolicitacaoTreinamento&quot;;
+
+    var destinatario;
+    var complementoAssunto;
+    var treinamento;
+
+    switch(String(hAPI.getCardValue(&quot;nivelTreinamento&quot;))) {
+        case &quot;treinamentoTecnico&quot;:
+            destinatario = &quot;evaldojunior@3coracoes.com.br&quot;;
+            complementoAssunto = &quot;técnico&quot;;
+            treinamento = &quot;Treinamento técnico&quot;;
+            break;
+        case &quot;treinamentoLideranca&quot;:
+            destinatario = &quot;evaldojunior@3coracoes.com.br&quot;;
+            complementoAssunto = &quot;de liderança&quot;;
+            treinamento = &quot;Treinamento de liderança&quot;;
+            break;
+        case &quot;treinamentoCultura&quot;:
+            destinatario = &quot;evaldojunior@3coracoes.com.br&quot;;
+            complementoAssunto = &quot;de cultura&quot;;
+            treinamento = &quot;Treinamento de cultura&quot;;
+            break;
+        default:
+            break;
+    }
+    
+    var parametros = new java.util.HashMap();
+    
+    var assuntoEmail = &quot;[TREINAMENTOS] Solicitação de treinamento &quot; + complementoAssunto;
+
+    parametros.put(&quot;subject&quot;, assuntoEmail);
+    parametros.put(&quot;complementoAssunto&quot;, complementoAssunto);
+    parametros.put(&quot;treinamento&quot;, treinamento);
+    parametros.put(&quot;numSolicitacao&quot;, String(getValue(&quot;WKNumProces&quot;)));
+    parametros.put(&quot;solicitante&quot;, String(hAPI.getCardValue(&quot;matriculaSolicitante&quot;)));
+    parametros.put(&quot;dataInscricao&quot;, String(hAPI.getCardValue(&quot;inscricoes&quot;)));
+    parametros.put(&quot;dataTreinamento&quot;, String(hAPI.getCardValue(&quot;dataTreinamento&quot;)));
+    
+    //Lista de Email dos destinatarios
+	var destinatarios = new java.util.ArrayList();
+	destinatarios.add(&quot;evaldojunior@3coracoes.com.br&quot;);
+	    
+	//Envia e-mail, com o Template configurado
+    notifier.notify(user, template, parametros, destinatarios, &quot;text/html&quot;);
+    
 }</eventDescription>
     </WorkflowProcessEvent>
   </list>
@@ -1276,8 +1600,8 @@
   <list>
     <SwimLane>
       <color>FFFFFF</color>
-      <height>881</height>
-      <width>1191</width>
+      <height>891</height>
+      <width>1311</width>
       <positionX>10</positionX>
       <positionY>0</positionY>
       <stateName>Solicitação de curso</stateName>
@@ -1292,8 +1616,8 @@
     </SwimLane>
     <SwimLane>
       <color>0080FF</color>
-      <height>220</height>
-      <width>1161</width>
+      <height>222</height>
+      <width>1281</width>
       <positionX>40</positionX>
       <positionY>0</positionY>
       <stateName>RH Solicitante</stateName>
@@ -1308,10 +1632,10 @@
     </SwimLane>
     <SwimLane>
       <color>0080C0</color>
-      <height>220</height>
-      <width>1161</width>
+      <height>222</height>
+      <width>1281</width>
       <positionX>40</positionX>
-      <positionY>220</positionY>
+      <positionY>222</positionY>
       <stateName>Aprovação - BP</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
@@ -1324,10 +1648,10 @@
     </SwimLane>
     <SwimLane>
       <color>8080FF</color>
-      <height>220</height>
-      <width>1161</width>
+      <height>225</height>
+      <width>1281</width>
       <positionX>40</positionX>
-      <positionY>440</positionY>
+      <positionY>666</positionY>
       <stateName>Aprovação - Área responsável</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
@@ -1340,10 +1664,10 @@
     </SwimLane>
     <SwimLane>
       <color>8000FF</color>
-      <height>221</height>
-      <width>1161</width>
+      <height>222</height>
+      <width>1281</width>
       <positionX>40</positionX>
-      <positionY>660</positionY>
+      <positionY>444</positionY>
       <stateName>Análise de solicitação - Treinamento</stateName>
       <type>2</type>
       <parentSequence>1</parentSequence>
@@ -1362,34 +1686,45 @@
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
-        <version>1</version>
+        <version>18</version>
         <linkSequence>60</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>831</positionX>
-      <positionY>705</positionY>
+      <positionX>932</positionX>
+      <positionY>695</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
-        <version>1</version>
+        <version>18</version>
         <linkSequence>60</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
-      <positionX>831</positionX>
-      <positionY>813</positionY>
+      <positionX>932</positionX>
+      <positionY>812</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
-        <version>1</version>
+        <version>18</version>
         <linkSequence>65</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>872</positionX>
       <positionY>552</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>RH_TRE_001_Solicitacao_Treinamento</processId>
+        <version>18</version>
+        <linkSequence>92</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>609</positionX>
+      <positionY>331</positionY>
     </ProcessLinkBend>
   </list>
   <list/>

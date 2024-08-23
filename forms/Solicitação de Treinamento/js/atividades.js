@@ -3,6 +3,59 @@ Atividades = {
     inicializar: function(){
         this.desabilitarTodosPaineis();
         this.habilitarPaineisPercorridos(this.listarPaineis());
+        this.atualizarCollapse();
+    },
+
+    atualizarCollapse: function() {
+        switch(Campos.numAtividade().val()) {
+            case "8":
+                $("#collapseInfosGerais").removeClass("in");
+                $('#painelInfosGerais .panel-heading .panel-title a').removeClass("up");
+                $("#collapseDadosTreinamento").removeClass("in");
+                $('#painelDadosTreinamento .panel-heading .panel-title a').removeClass("up");
+                $("#collapseInfosParticipantes").removeClass("in");
+                $('#painelInfosParticipantes .panel-heading .panel-title a').removeClass("up");
+                $("#collapseJustificativaTreinamento").removeClass("in");
+                $('#painelJustificativaTreinamento .panel-heading .panel-title a').removeClass("up");
+                $("#collapseInvestimento").removeClass("in");
+                $('#painelInvestimento .panel-heading .panel-title a').removeClass("up");
+
+                $("#collapseAprvBP").addClass("in");
+                $("#collapseAprvBP .panel-heading .panel-title a").addClass("up");
+                break;
+            case "10":
+                $("#collapseInfosGerais").removeClass("in");
+                $('#painelInfosGerais .panel-heading .panel-title a').removeClass("up");
+                $("#collapseDadosTreinamento").removeClass("in");
+                $('#painelDadosTreinamento .panel-heading .panel-title a').removeClass("up");
+                $("#collapseInfosParticipantes").removeClass("in");
+                $('#painelInfosParticipantes .panel-heading .panel-title a').removeClass("up");
+                $("#collapseJustificativaTreinamento").removeClass("in");
+                $('#painelJustificativaTreinamento .panel-heading .panel-title a').removeClass("up");
+                $("#collapseInvestimento").removeClass("in");
+                $('#painelInvestimento .panel-heading .panel-title a').removeClass("up");
+
+                $("#collapseAreaResponsavel").addClass("in");
+                $("#collapseAreaResponsavel .panel-heading .panel-title a").addClass("up");
+                break;
+            case "49":
+                $("#collapseInfosGerais").removeClass("in");
+                $('#painelInfosGerais .panel-heading .panel-title a').removeClass("up");
+                $("#collapseDadosTreinamento").removeClass("in");
+                $('#painelDadosTreinamento .panel-heading .panel-title a').removeClass("up");
+                $("#collapseInfosParticipantes").removeClass("in");
+                $('#painelInfosParticipantes .panel-heading .panel-title a').removeClass("up");
+                $("#collapseJustificativaTreinamento").removeClass("in");
+                $('#painelJustificativaTreinamento .panel-heading .panel-title a').removeClass("up");
+                $("#collapseInvestimento").removeClass("in");
+                $('#painelInvestimento .panel-heading .panel-title a').removeClass("up");
+
+                $("#collapseNivelTreinamento").addClass("in");
+                $("#collapseNivelTreinamento .panel-heading .panel-title a").addClass("up");
+                break;
+            default:
+                break;
+        }
     },
 
     habilitarPaineisPercorridos: function(paineis) {
